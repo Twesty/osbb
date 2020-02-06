@@ -1,0 +1,227 @@
+@import "vars"
+
+@media screen and (max-width: 1200px)
+    .container 
+        max-width: 1140px
+
+    .mainHeader
+        padding: 0 2rem
+    
+    .latestNews
+        &__content
+            padding: 0
+
+@media screen and (max-width: 992px)
+    html
+        font-size: 15px
+
+    .container
+        max-width: 960px
+
+    .mainHeader
+        &__logo
+            display: none
+
+    .cover
+        padding: 3rem
+
+    .headerMenu
+        position: relative
+        z-index: 1
+        &__list
+            position: absolute
+            flex-direction: column
+            padding: 1rem 2rem
+            margin: 0
+            left: 100%
+            top: 100%
+            background-color: #fff
+            box-shadow: 0px 4px 25px rgba(10, 8, 84, 0.15)
+        &__item
+            padding: 5px 0
+            &:not(:last-child)
+                border-bottom: 1px solid $text
+        &__mobile  
+            display: flex
+            flex: 1
+
+    .footer
+        &__floorBg
+            top: 45%
+            left: 70%
+            transform: scaleX(-1) rotate(15deg)
+        &__rightSide
+            flex-direction: column
+        &__aboutCompany
+            display: flex
+            flex-direction: column
+            justify-content: center
+            padding: .7rem 1rem .7rem 3rem
+        &__menu
+            padding: 1rem 1rem 1rem 3rem
+        &__navWrap
+            border-right: none
+        &__contacts
+
+@media screen and (max-width: 768px)
+    html
+        font-size: 14px
+    
+    .container
+        max-width: 720px
+
+    .mainHeader
+        padding: 0 0 .5rem 1rem
+        padding-right: 0
+        &__user
+            flex-direction: column-reverse
+            align-items: flex-end
+        &__registration
+            padding: .85rem 2.5rem
+        &__contacts
+            justify-content: space-between
+            flex-direction: column
+            min-height: 60px
+    
+    .cover
+        padding: 2rem
+        &__action
+            display: none
+        &__title
+            font-size: 1.5rem
+        &__subtitle
+            font-size: 1.2rem
+
+    .coverForm
+        &__fieldset
+            &--mobile
+                margin-top: 1rem
+                display: block
+        &__input
+            max-width: 140px
+            margin: 0
+            &:first-child
+                margin-right: 1rem
+        &__button
+            display: none
+            &--mobile
+                display: block
+    
+    .info
+        &__floorBg
+            left: 83%
+        &__content
+            flex-direction: column
+    
+    .supliers
+        max-width: 90%
+
+    .tariffs
+        &__content
+            flex-direction: column
+        &__fieldset
+            padding: 0
+        &__input
+            width: 90%   
+    
+    .latestNews
+        &__floorBg
+            width: 200px
+            bottom: 0
+            right: 80%
+        &__slide
+            padding: 2.5rem 6rem
+            flex-direction: column-reverse
+        &__rightSide
+            margin-bottom: 2rem
+            margin-left: 0
+        &__title
+            max-width: 100%
+            display: none
+            &--mobile
+                display: block
+        &__readMore
+            text-align: right
+
+    .slider
+        &__arrow
+            width: 35px
+            &:after
+                width: 35px
+
+@media screen and (max-width: 576px)
+    html
+        font-size: 13px
+    
+    .container
+        max-width: 540px
+
+    .contacts__span
+        white-space: nowrap
+
+    .coverForm
+        &__input  
+            font-size: .9rem
+            max-width: 120px
+
+    .supliers
+        max-width: 100%
+    
+    .suplier
+        padding: 1rem 0
+    
+    .info
+        &__text
+            padding-right: 0
+        &__floorBg
+            width: 150px
+            bottom: 95%
+
+    .latestNews
+        &__floorBg
+            width: 150px
+            bottom: -5%
+        &__slide
+            padding: 2.5rem
+    
+    .footer
+        &__floorBg
+            top: 67%
+            left: 57%
+            transform: scaleX(-1) rotate(15deg)
+        flex-direction: column
+        &__rightSide
+            flex-direction: column
+        &__aboutCompany
+            display: flex
+            text-align: center
+            padding: 1.5rem
+        &__logo
+            margin: auto
+        &__menu
+            padding: 1.5rem
+        &__navWrap
+            border-right: none
+        &__contacts
+            padding: 1.5rem
+
+@media screen and (max-width: 350px)
+
+    .cover
+        &__content
+            display: flex
+            flex-direction: column
+            align-items: center
+
+    .coverForm
+        width: max-content
+        &__input
+            max-width: 100%
+            margin: auto !important
+            &:first-child
+                margin-bottom: 1rem !important
+        &__fieldset
+            display: flex
+            align-items: center
+            justify-content: center
+            white-space: normal
