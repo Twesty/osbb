@@ -397,6 +397,7 @@ h1, h2, h3, h4, h5, h6
 		left: 93%
 
 .supliers
+	box-sizing: border-box
 	display: flex
 	margin: auto
 	flex-direction: column
@@ -417,9 +418,8 @@ h1, h2, h3, h4, h5, h6
 	padding: 1rem 3rem
 	&__circle
 		position: relative
-		width: 56px
-		height: 56px
-		margin-right: 1.5rem
+		min-width: 56px
+		min-height: 56px
 	&__circleRighthalf
 		position: absolute
 		right: 0
@@ -453,6 +453,7 @@ h1, h2, h3, h4, h5, h6
 		background: linear-gradient(to bottom, rgba(134, 188, 66, 0), rgba(134, 188, 66, .25), rgba(134, 188, 66, .5))
 		z-index: 1
 	&__name
+		margin-left: 1.5rem
 		text-decoration: underline
 
 .tariffs
