@@ -43,6 +43,46 @@ h1, h2, h3, h4, h5, h6
 	&--accent
 		color: $accent
 
+.responsive-img
+	max-width: 100%
+
+.arrow
+	position: relative
+	width: 65px
+	height: 8px
+	cursor: pointer
+	&:after
+		position: absolute
+		content: ''
+		width: 65px
+		height: 1px
+		top: 50%
+		left: 0
+		transform: translateY(-50%)
+		background-color: $title
+	&:before
+		content: ''
+		position: absolute
+		width: 4px
+		height: 4px
+		border-left: 1px solid $title
+		border-top: 1px solid $title
+		bottom: 50%	
+	&__green
+		&:before
+			border-color: $accent
+			transition: border-color .5s
+		&:after
+			background-color: $accent	
+			transition: background-color .5s
+	&__prev
+		&:before
+			transform: translateY(50%) rotate(-45deg)
+	&__next
+		&:before
+			right: 0
+			transform: translateY(50%) rotate(135deg)
+
 .button
 	color: #fff
 	font-family: inherit
@@ -197,9 +237,9 @@ h1, h2, h3, h4, h5, h6
 	justify-content: center
 	cursor: pointer
 	&__bar
-		width: 36px
+		width: 45px
 		height: 4px
-		margin-bottom: 3px
+		margin-bottom: 4px
 		border-radius: 2px
 		background-color: $accent
 
@@ -215,6 +255,7 @@ h1, h2, h3, h4, h5, h6
 	padding: 5rem
 	height: max-content
 	&__content
+		box-sizing: border-box
 		position: relative
 		max-width: 100%
 		padding: 3rem 7rem
@@ -304,6 +345,9 @@ h1, h2, h3, h4, h5, h6
 		justify-content: center
 	&__button
 		text-decoration: none
+	&__mobile
+	&__mobileImage
+		padding: 1rem 0
 
 .slider
 	&__slide
@@ -313,34 +357,6 @@ h1, h2, h3, h4, h5, h6
 		display: flex
 		justify-content: center
 		align-items: center
-	&__arrow
-		position: relative
-		width: 65px
-		height: 8px
-		cursor: pointer
-		&:after
-			position: absolute
-			content: ''
-			width: 65px
-			height: 1px
-			top: 50%
-			transform: translateY(-50%)
-			background-color: $title
-		&:before
-			content: ''
-			position: absolute
-			width: 4px
-			height: 4px
-			border-left: 1px solid $title
-			border-top: 1px solid $title
-			bottom: 50%
-	&__prev
-		&:before
-			transform: translateY(50%) rotate(-45deg)
-	&__next
-		&:before
-			right: 0
-			transform: translateY(50%) rotate(135deg)
 	&__bars
 		display: flex
 		justify-content: center
@@ -399,21 +415,50 @@ h1, h2, h3, h4, h5, h6
 	align-items: center
 	font-family: $roboto
 	padding: 1rem 3rem
-	&__number
+	&__circle
+		position: relative
+		width: 56px
+		height: 56px
+		margin-right: 1.5rem
+	&__circleRighthalf
+		position: absolute
+		right: 0
+		width: 28px
+		height: 56px
+		border-top-right-radius: 42px
+		border-bottom-right-radius: 42px
+		background: linear-gradient(to bottom, rgba(134, 188, 66, 1), rgba(134, 188, 66, .75), rgba(134, 188, 66, .5))
+		z-index: 1
+	&__circleInner
+		position: absolute
 		display: flex
 		align-items: center
 		justify-content: center
-		font-weight: 600
-		min-width: 56px
-		min-height: 56px
 		color: $accent
-		border: 2px solid $accent
+		font-weight: 600
+		background-color: #fff
+		top: 2px
+		left: 2px
+		width: 52px
+		height: 52px
 		border-radius: 50%
-		margin-right: 15px
+		z-index: 2
+	&__circleLefthalf
+		left: 0
+		position: absolute
+		width: 28px
+		height: 56px
+		border-top-left-radius: 42px
+		border-bottom-left-radius: 42px
+		background: linear-gradient(to bottom, rgba(134, 188, 66, 0), rgba(134, 188, 66, .25), rgba(134, 188, 66, .5))
+		z-index: 1
 	&__name
 		text-decoration: underline
 
 .tariffs
+	display: flex
+	justify-content: center
+	align-items: center
 	font-family: $openSans
 	color: $title
 	background-repeat: no-repeat
@@ -421,6 +466,7 @@ h1, h2, h3, h4, h5, h6
 	background-position: center
 	&__wrap
 		position: relative
+		margin: 1rem
 		padding: 3rem
 		border-radius: 4px
 		background-color: rgba(255, 255, 255, 0.94)
@@ -514,7 +560,7 @@ h1, h2, h3, h4, h5, h6
 		background-position: center
 		background-size: cover
 		background-repeat: no-repeat
-		min-height: 400px
+		min-height: 300px
 		margin-left: 2rem
 		box-shadow: 0px 4px 25px rgba(10, 8, 84, 0.15)		
 	&__bars
@@ -528,12 +574,24 @@ h1, h2, h3, h4, h5, h6
 		
 .readMore
 	&__link
+		display: flex
+		justify-content: flex-end
+		align-items: center
 		text-decoration: none
 		color: $accent
 		transition: color .5s
 		&:hover
 			color: #4b5464
 			transition: color .5s
+			.readMore__arrow
+				&:before
+					transition: border-color .5s
+					border-color: #4b5464
+				&:after
+					transition: background-color .5s
+					background-color: #4b5464
+	&__text
+		margin-right: 10px
 	
 .footer
 	position: relative

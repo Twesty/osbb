@@ -70,6 +70,11 @@
     .container
         max-width: 720px
 
+    .arrow
+        width: 35px
+        &:after
+            width: 35px
+
     .mainHeader
         padding: 0 0 .5rem 1rem
         padding-right: 0
@@ -84,13 +89,16 @@
             min-height: 60px
     
     .cover
-        padding: 2rem
+        padding: 2rem 1rem
+        &__content
+            padding: 1rem 3rem
         &__action
             display: none
         &__title
-            font-size: 1.5rem
+            letter-spacing: 1px
+            font-size: 1.6rem
         &__subtitle
-            font-size: 1.2rem
+            font-size: 1.1rem
 
     .coverForm
         &__fieldset
@@ -101,7 +109,7 @@
             max-width: 140px
             margin: 0
             &:first-child
-                margin-right: 1rem
+                margin-right: .5rem
         &__button
             display: none
             &--mobile
@@ -141,13 +149,7 @@
             &--mobile
                 display: block
         &__readMore
-            text-align: right
-
-    .slider
-        &__arrow
-            width: 35px
-            &:after
-                width: 35px
+            text-align: right 
 
 @media screen and (max-width: 576px)
     html
@@ -159,10 +161,20 @@
     .contacts__span
         white-space: nowrap
 
+    .cover
+        &__content
+            padding: 1rem 1.5rem
+
     .coverForm
         &__input  
             font-size: .9rem
             max-width: 120px
+
+    .latestPhotos
+        &__slides
+            display: none
+        &__controls
+            opacity: 0
 
     .supliers
         max-width: 100%
@@ -225,3 +237,15 @@
             align-items: center
             justify-content: center
             white-space: normal
+
+// Min width
+
+@media screen and (min-width: 576px)
+
+    .latestPhotos
+        &__slides
+            display: block
+        &__controls
+            opacity: 1
+        &__mobile
+            display: none
