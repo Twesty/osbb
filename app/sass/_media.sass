@@ -1,13 +1,18 @@
 @import "vars"
-
-@media screen and (max-width: 1200px)
+    
+@media screen and (max-width: 1280px)
 
     .mainHeader
         padding: 0 2rem
     
-    .latestNews
+    .cover
+        padding: 3rem
+        &__image
+            display: none
         &__content
-            padding: 0
+            border: none
+            float: unset
+            margin: auto
 
 @media screen and (max-width: 992px)
     html
@@ -17,28 +22,63 @@
         &__logo
             display: none
 
-    .cover
-        padding: 3rem
-
     .headerMenu
         position: relative
         z-index: 1
         &__list
             position: absolute
+            display: none
             flex-direction: column
-            padding: 1rem 2rem
+            justify-content: flex-start
+            align-items: flex-start !important
+            padding: 4rem 3rem 2rem 3rem
             margin: 0
-            left: 100%
-            top: 100%
+            right: 0
+            z-index: -1
             background-color: #fff
             box-shadow: 0px 4px 25px rgba(10, 8, 84, 0.15)
+            max-width: 300px
         &__item
-            padding: 5px 0
-            &:not(:last-child)
-                border-bottom: 1px solid $text
+            font-size: 1.125rem
+            padding: 10px 0
+            text-align: left
         &__mobile  
             display: flex
             flex: 1
+        &__item-corner
+            display: block
+
+    .info
+        &__floorBg
+            right: 92%
+
+    .members
+        &__floor-bg
+            display: block
+        &__bg
+            left: 80%
+        &__left-side-dots
+            display: none
+        &__left-side
+            left: 0
+        &__right-side
+            max-width: fit-content
+            display: block
+            margin: auto
+            &:before
+                display: none
+
+    .member
+        width: fit-content
+
+    .deptors
+        &__dots
+            top: unset
+            bottom: 0
+            transform: translateY(-150%) translateX(55%)
+        &__right-side
+            margin-top: 75px
+            flex-direction: row
 
     .footer
         &__floorBg
@@ -108,8 +148,6 @@
                 display: block
     
     .info
-        &__floorBg
-            left: 83%
         &__content
             flex-direction: column
     
@@ -124,24 +162,19 @@
         &__input
             width: 90%   
     
-    .latestNews
-        &__floorBg
-            width: 200px
-            bottom: 0
-            right: 80%
-        &__slide
-            padding: 2.5rem 6rem
-            flex-direction: column-reverse
-        &__rightSide
-            margin-bottom: 2rem
-            margin-left: 0
-        &__title
-            max-width: 100%
-            display: none
-            &--mobile
-                display: block
-        &__readMore
-            text-align: right 
+    .deptors
+        &__wrap
+            padding: 0
+            margin: auto
+        &__table
+            font-size: .750rem
+            td
+                padding: 5px 10px
+        &__right-side
+            flex-direction: column
+        &__person
+            margin: 70px 0 0 0
+            padding: 0
 
 @media screen and (max-width: 576px)
     html
@@ -150,20 +183,15 @@
     .contacts__span
         white-space: nowrap
 
+    .headerMenu
+        &__list
+            max-width: 100%
+            left: 0
+            right: 0
+
     .cover
         &__content
             padding: 1rem 1.5rem
-
-    .coverForm
-        &__input  
-            font-size: .9rem
-            max-width: 120px
-
-    .latestPhotos
-        &__slides
-            display: none
-        &__controls
-            opacity: 0
 
     .supliers
         max-width: 100%
@@ -178,12 +206,17 @@
             width: 150px
             bottom: 95%
 
-    .latestNews
-        &__floorBg
-            width: 150px
-            bottom: -5%
-        &__slide
-            padding: 2.5rem
+    .shedule
+        &__wrap
+            padding: 0 10px
+        &__person
+            padding: 0 15px
+
+    .members
+        &__bg
+            display: none
+        &__floor-bg
+            display: none
     
     .footer
         &__floorBg
@@ -206,7 +239,7 @@
         &__contacts
             padding: 1.5rem
 
-@media screen and (max-width: 350px)
+@media screen and (max-width: 375px)
 
     .cover
         &__content
@@ -226,6 +259,13 @@
             align-items: center
             justify-content: center
             white-space: normal
+
+    .members
+        &__left-side
+            left: -20px
+            right: -20px
+        &__left-side-wrap
+            min-height: 300px
 
 // Min width
 

@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	$('.headerMenu__mobileBars').on('click', function(){
 
-		$('.headerMenu__list').toggleClass('headerMenu__mobileList--active')
+		$('.headerMenu__list').slideToggle(200);
+		$('.headerMenu__mobileBars').toggleClass('mobileBars--active');
 
 	})
 
