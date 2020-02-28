@@ -1,8 +1,6 @@
 @import "vars"
 
 @media screen and (max-width: 1200px)
-    .container 
-        max-width: 1140px
 
     .mainHeader
         padding: 0 2rem
@@ -14,9 +12,6 @@
 @media screen and (max-width: 992px)
     html
         font-size: 15px
-
-    .container
-        max-width: 960px
 
     .mainHeader
         &__logo
@@ -66,9 +61,6 @@
 @media screen and (max-width: 768px)
     html
         font-size: 14px
-    
-    .container
-        max-width: 720px
 
     .arrow
         width: 35px
@@ -154,9 +146,6 @@
 @media screen and (max-width: 576px)
     html
         font-size: 13px
-    
-    .container
-        max-width: 540px
 
     .contacts__span
         white-space: nowrap
@@ -239,6 +228,13 @@
             white-space: normal
 
 // Min width
+
+@media screen and (min-width: 1680px)
+
+    .cover
+        &__content
+            float: unset
+            margin: auto
 
 @media screen and (min-width: 576px)
 
