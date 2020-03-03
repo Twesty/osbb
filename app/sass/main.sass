@@ -26,7 +26,10 @@ body
 	line-height: 1.65
 	font-family: $muli
 	overflow-x: hidden
-	
+	min-height: 100vh
+	display: flex
+	flex-direction: column
+	justify-content: space-between
 	color: $text
 	margin: 0
 
@@ -596,6 +599,7 @@ a
 
 .member
 	display: flex
+	align-items: flex-start
 	&__icon
 		padding-right: 25px !important
 	&__info
@@ -889,5 +893,17 @@ a
 
 .social
 	padding-right: 10px
+
+.info
+	flex-grow: 1
+	&__item
+	&__item-title
+		color: $title
+		font-size: 1.125rem
+		font-weight: 500
+	&__item-phones
+		padding: 15px 0
+		a
+			color: $accent
 
 @import media
